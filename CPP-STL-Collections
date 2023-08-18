@@ -1,4 +1,4 @@
-Tuple
+1) Tuple
 
   1) example tuple definition as below
     tuple<int, string, type1, type2, type3, etc....> person
@@ -31,9 +31,17 @@ Tuple
     auto t3 = make_tuple(foo,foo1);
     this automatically determines type of t3 to <int, int, char, string>
   
-Set
+2) Set
 
-Vector
+3) Vector
+    Vector is like an arrary and it can change its size unlike array
+    vector<int> v1 = {1,2,3}
+    v1[0]
+    v1.front()
+    v1.back()
+    v1.size()
+    v1.capacity()
+    v1.push_back()
 
 4) map
     4.1) MAP holds key, value pairs
@@ -65,5 +73,3 @@ Vector
           for (map<string,int)::iterator itr = mp.being(); itr != mp.end();itr++) {
               cout << itr->first << itr->second << endl;
           }
-    
-  
