@@ -32,16 +32,40 @@
     this automatically determines type of t3 to <int, int, char, string>
   
 2) Set
+  set is an unordered list of unique elements
+  set <int> s1 = {10,20,30,40,50};
+
+  s1.insert(300);
+  s1.erase(300);
+  s1.find(10)
+    if (s1.find(10) == s1.end()) {
+      //this means, value 10 not found in set
+    }
 
 3) Vector
     Vector is like an arrary and it can change its size unlike array
     vector<int> v1 = {1,2,3}
-    v1[0]
-    v1.front()
-    v1.back()
-    v1.size()
-    v1.capacity()
-    v1.push_back()
+      v1[0]
+      v1.front()
+      v1.back()
+      v1.size()
+      v1.capacity()
+      v1.push_back()
+      v1.pop_back()
+      v1.shrink_to_fit()
+    inserting at beginning
+      v1.insert(v1.begin(),100)
+    erase
+      v1.erase(value)
+
+    iterating vector
+    for (int i = 0; i < v1.size(); i++) {
+      cout << v1[i] << endl;
+    }
+
+    for (auto itr = v1.begin(); itr != v1.end(); itr++) {
+      cout << *itr <<endl;
+    }
 
 4) map
     4.1) MAP holds key, value pairs
