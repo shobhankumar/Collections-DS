@@ -1,1 +1,31 @@
+Tuple
+  1) example tuple definition as below
+    tuple<int, string, type1, type2, type3, etc....> person
 
+  2) tuple initialization
+    tuple<int, string> person(20,"shobhan")
+
+  3) accessing tuple index
+    get<20>(person)
+
+  4) changing a tuple
+    get<20>(person) = "Shobhan Kumar"
+
+  5) defining a tuple and initialize later
+    tuple <int, float, char, string> foo
+    foo = make_tuple(10,2.5,'c',"abc")
+
+  6) tie (decompose tuple into individual variables)
+    tupe<int, int> foo = make_tuple(1,2);
+    int x, y;
+    tie(x,y) = foo;
+    cout << x << y << endl;
+  7)
+
+  
+
+Set
+
+Vector
+
+map
