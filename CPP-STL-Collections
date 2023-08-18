@@ -54,6 +54,16 @@ Vector
           mp.erase(p1.first);
     4.5) clearing a map
           mp.clear();
-    4.6) 
+    4.6) size of a map
+          mp.size();
+    4.7) iterating map
+          for (auto itr = mp.begin(); itr != mp.end(); itr++) {
+            
+          }
+          auto keyword is to automatically detect itr type based on what mp.beign() returns.
+          another way of iterating
+          for (map<string,int)::iterator itr = mp.being(); itr != mp.end();itr++) {
+              cout << itr->first << itr->second << endl;
+          }
     
   
