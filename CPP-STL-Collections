@@ -35,4 +35,25 @@ Set
 
 Vector
 
-map
+4) map
+    4.1) MAP holds key, value pairs
+        map <string, int> mp = { { "shobhan","19 } ,
+                                 { "foo", 20} };
+    4.2) Accessing Element in Map
+        mp ["shobhan"];
+    4.3) insert an element into map, multiple ways like below
+        4.3.1)
+          mp ["foo"] = 100;
+          count << mp["foo"] << endl;
+        4.3.2)
+          mp.insert(make_pair<string, int>("foo",100);
+        4.3.3)
+          pair <string,int> p1("foo",100);
+          mp.insert(p1);
+    4.4) erase an element key needs to be passed
+          mp.erase(p1.first);
+    4.5) clearing a map
+          mp.clear();
+    4.6) 
+    
+  
