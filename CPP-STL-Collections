@@ -97,3 +97,6 @@
           for (map<string,int)::iterator itr = mp.being(); itr != mp.end();itr++) {
               cout << itr->first << itr->second << endl;
           }
+
+5) string operations
+  s ++ to_string(5)
