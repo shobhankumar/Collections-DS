@@ -107,6 +107,7 @@
   maximum element is always at top, internally elements gets stored in a tree data structure
 
   priority_queue <int, vector<int>, greater <int>> pq;
+  least element is at the top with above declaration
 
   
 
