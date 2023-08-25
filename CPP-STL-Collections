@@ -106,6 +106,8 @@
   pq.push(13);
   maximum element is always at top, internally elements gets stored in a tree data structure
 
+  priority_queue <int, vector<int>, greater <int>> pq;
+
   
 
 6) string operations
