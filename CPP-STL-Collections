@@ -98,5 +98,15 @@
               cout << itr->first << itr->second << endl;
           }
 
-5) string operations
+5) Priority Queue
+  priority_queue<int> pq
+  pq.push(10);
+  pq.push(11);
+  pq.push(12);
+  pq.push(13);
+  maximum element is always at top, internally elements gets stored in a tree data structure
+
+  
+
+6) string operations
   s ++ to_string(5)
