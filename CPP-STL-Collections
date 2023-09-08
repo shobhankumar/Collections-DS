@@ -122,5 +122,5 @@ https://www.geeksforgeeks.org/cpp-stl-interview-questions/?ref=outind
 
   
 
-6) string operations
-  s ++ to_string(5)
+7) string operations
+  s + to_string(5)
