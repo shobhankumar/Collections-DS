@@ -116,6 +116,10 @@ https://www.geeksforgeeks.org/cpp-stl-interview-questions/?ref=outind
   priority_queue <int, vector<int>, greater <int>> pq;
   least element is at the top with above declaration
 
+
+6) how to find difference between two sets/maps etc..
+  set_difference(t1.begin(), t1.end(), s1.begin(), s1.end(), inserter(result, result.end()));
+
   
 
 6) string operations
