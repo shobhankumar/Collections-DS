@@ -127,3 +127,4 @@ https://www.geeksforgeeks.org/cpp-stl-interview-questions/?ref=outind
 
 8) string operations
   s + to_string(5)
+  stoi() --> converting a string to integer
