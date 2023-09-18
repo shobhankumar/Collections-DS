@@ -44,6 +44,10 @@ https://www.geeksforgeeks.org/cpp-stl-interview-questions/?ref=outind
       //this means, value 10 not found in set
     }
 
+  vector <int> nums; ==> directly copying nums into set without needing a loop
+  unordered_set<int>s(nums.begin(), nums.end());
+
+
 3) Vector
     Vector is like an arrary and it can change its size unlike array
     vector<int> v1 = {1,2,3}
