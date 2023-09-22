@@ -1,0 +1,24 @@
+class Solution {
+public:
+    bool isIsomorphic(string s, string t) {
+        map <char, char> m1;
+        map <char, char> m2;
+
+        for (int i = 0; i < s.length(); i++) {          
+            if ((m1.find(t[i]) == m1.end()) && (m2.find(s[i]) == m2.end())) {
+                m1.insert(make_pair(t[i],s[i]));
+                m2.insert(make_pair(s[i],t[i]));
+            } else  {
+                auto itr = m1.find(t[i]);
+                auto itr1 = m2.find(s[i]);
+                if (itr == m1.end() || itr1 == m2.end()) {
+                    return false;
+                }
+                if (itr->first != itr1->second) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+};
