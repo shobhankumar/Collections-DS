@@ -1,0 +1,2 @@
+1) unordered_map <string, set<string>> um;
+     um.insert(pair<string, set<string>>(domain,{localname}));
