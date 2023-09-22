@@ -1,0 +1,39 @@
+class Solution {
+public:
+    int numUniqueEmails(vector<string>& emails) {
+        unordered_map <string, set<string>> um;
+        string localname;
+        string domain;
+        int length = emails.size();
+        int i = 0;
+        int pos;
+        int unique = 0;
+
+        for ( ; i < length ; i++) {
+            string email = emails[i];
+            pos =  email.find("@");
+            localname = email.substr(0,pos);
+            domain = email.substr(pos);
+
+            //ignoring + in localname
+            pos = localname.find("+");
+            if (pos != -1) {
+                localname = localname.substr(0,pos);
+            }
+            auto it = remove_if(begin(localname),end(localname),[](char c){return (c == '.');});
+            localname.erase(it, end(localname));
+
+            auto itr = um.find(domain);
+            if (itr == um.end()) {
+                um.insert(pair<string, set<string>>(domain,{localname}));
+            } else {
+                um[domain].insert(localname);
+            }
+        }
+
+        for (auto itr: um) {
+            unique += itr.second.size();
+        }
+        return unique;
+    }
+};
