@@ -1,0 +1,19 @@
+func isAnagram(s string, t string) bool {
+    var tm = make(map[rune]int)
+    var sm = make(map[rune]int)
+
+    for _,val := range t {
+        tm[val]++
+    }
+
+    for _,val := range s {
+        sm[val]++
+    }
+
+    eq := reflect.DeepEqual(sm, tm)
+    if eq {
+        return true
+    } else {
+        return false
+    }
+}
