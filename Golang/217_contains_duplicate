@@ -1,0 +1,14 @@
+func containsDuplicate(nums []int) bool {
+    var n1 = make(map[int]int)
+    var found bool = false
+
+    for _,val := range nums {
+        _,ok := n1[val];
+        if ok == false {
+            n1[val]++
+        } else {
+            found = true
+        }
+    }
+    return found
+}
