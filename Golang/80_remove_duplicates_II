@@ -1,0 +1,11 @@
+func removeDuplicates(nums []int) int {
+    var index int = 0
+
+    for _,val := range nums {
+        if index < 2 || val > nums[index-2] {
+            nums[index] = val
+            index++
+        }
+    }
+    return index;
+}
