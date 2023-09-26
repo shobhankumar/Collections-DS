@@ -1,0 +1,29 @@
+func merge(nums1 []int, m int, nums2 []int, n int)  {
+    var size_n1 int = m-1
+    var size_n2 int = n-1
+
+    var size_sorted = (m+n)-1
+
+    for size_n1 >=0 && size_n2 >= 0 {
+        if nums1[size_n1] > nums2[size_n2] {
+            nums1[size_sorted] = nums1[size_n1]
+            size_n1--
+        } else {
+            nums1[size_sorted] = nums2[size_n2]
+            size_n2--
+        }
+        size_sorted--
+    }
+
+    for size_n1 >= 0 {
+        nums1[size_sorted] = nums1[size_n1]
+        size_n1--
+        size_sorted--
+    }
+
+    for size_n2 >= 0 {
+        nums1[size_sorted] = nums2[size_n2]
+        size_n2--
+        size_sorted--
+    }
+}
