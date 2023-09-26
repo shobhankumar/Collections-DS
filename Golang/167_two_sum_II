@@ -1,0 +1,18 @@
+func twoSum(numbers []int, target int) []int {
+    var result []int
+    var end int = len(numbers)-1
+    var start int = 0
+
+    for start < end {
+        if numbers[start] + numbers[end] == target {
+            result = append(result,start+1)
+            result = append(result,end+1)
+            break
+        } else if numbers[start] + numbers[end] < target {
+            start++
+        } else {
+            end--
+        }
+    }
+    return result
+}
