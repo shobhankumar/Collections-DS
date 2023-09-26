@@ -1,0 +1,22 @@
+func groupAnagrams(strs []string) [][]string {
+    var result [][]string
+    var strmap = make(map[string][]string)
+    var temp string
+
+    for _,word := range strs {
+        charSlice := strings.Split(word, "")
+        sort.Strings(charSlice)
+        temp = strings.Join(charSlice, "")
+        _,ok := strmap[temp]
+        if ok == false {
+            strmap[temp] = []string{word}
+        } else {
+            strmap[temp] = append(strmap[temp],word)
+        }
+    }
+
+    for _,words := range strmap {
+        result = append(result,words)
+    }
+    return result
+}
