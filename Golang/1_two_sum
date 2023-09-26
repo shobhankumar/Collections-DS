@@ -1,0 +1,15 @@
+func twoSum(nums []int, target int) []int {
+    var result []int
+    var nm = make(map[int]int)
+
+    for index,val := range nums {
+        x,ok := nm[target-val]
+        if ok == false {
+            nm[val] = index
+        } else {
+            result = append(result,index);
+            result = append(result,x)
+        }
+    }
+    return result
+}
