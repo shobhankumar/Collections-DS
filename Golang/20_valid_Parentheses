@@ -1,0 +1,35 @@
+func isValid(s string) bool {
+    var stack = make([]byte,len(s))
+    var top int = 0
+    var i int = 0
+
+    if len(s) == 0 {
+        return true
+    }
+
+    for i < len(s) {
+        if s[i] == '(' || s[i] == '{' || s[i] == '[' {
+            stack[top] = s[i]
+            top++
+        } else {
+            if top == 0 {
+                return false
+            }
+            if s[i] == ')' && stack[top-1] != '(' {
+                return false
+            }
+           if s[i] == '}' && stack[top-1] != '{' {
+                return false
+            }
+           if s[i] == ']' && stack[top-1] != '[' {
+                return false
+            }
+            top--
+        }
+        i++
+    }
+    if top > 0 {
+        return false
+    }
+    return true
+}
