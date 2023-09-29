@@ -1,0 +1,41 @@
+class Solution {
+public:
+    bool isSubsequence(string s, string t) {
+        map<char, int> t1;
+        map<char, int> s1;
+        int i = 0;
+        int index = INT_MIN;
+
+        for ( ; i < t.size() ; i++) {
+            t1[t[i]]++;
+        }
+
+        for ( i = 0 ; i < s.size() ; i++) {
+            s1[s[i]]++;
+        }
+
+        for (auto itr2: s1) {
+            auto itr1 = t1.find(itr2.first);
+            if (itr1 == t1.end()) {
+                return false;
+            }
+            if (itr2.second < itr1->second) {
+                return false;
+            }
+        }
+
+        for ( char c: s) {
+            auto itr = t1.find(c);
+            if (itr == t1.end()) {
+                return false;
+            }
+            int temp = itr->second;
+            if (index > temp) {
+                return false;
+            }
+            index = temp;
+        }
+
+        return true;
+    }
+};
